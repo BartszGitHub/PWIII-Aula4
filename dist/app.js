@@ -1,11 +1,13 @@
-var Aluno = /** @class */ (function () {
-    function Aluno(nome) {
-        this.nome = nome;
-    }
-    Aluno.prototype.exibir = function () {
-        console.log("Nome:" + this.nome);
-    };
-    return Aluno;
-}());
-var ronqui = new Aluno("Rafael Ronqui");
-ronqui.exibir();
+"use strict";
+exports.__esModule = true;
+var base_escola_1 = require("./base-escola");
+var ronqui = new base_escola_1.Aluno("Rafael Ronqui");
+var classi = new base_escola_1.Pessoa();
+var via = new base_escola_1.Viagem();
+classi.peso = 68;
+classi.altura = 1.74;
+via.tempoGasto = 2;
+via.velocidadeMedia = 100;
+via.rendimentoVeiculo = 10;
+console.log("IMC:" + classi.imc() + ", Situa\u00E7\u00E3o:" + classi.classificar());
+console.log("Distancia:" + via.obterDistancia() + ", Consumo:" + via.obterConsumo());
